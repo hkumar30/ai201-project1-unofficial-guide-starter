@@ -2,7 +2,7 @@
 
 This project is a small RAG system for ASU Computer Science undergraduate course planning. It combines official ASU sources with unofficial student-experience sources so students can ask grounded questions about degree requirements, sequencing, advising, tutoring, and course workload.
 
-![alt text](/demo-ss.png)
+![SS of GUI](https://github.com/hkumar30/ai201-project1-unofficial-guide-starter/blob/main/demo-ss.png)
 <p style="text-align: center;">Figure 1. GUI of the Unofficial Guide</p>
 
 Demo Link: https://www.youtube.com/watch?v=iPOysvXrRjM
