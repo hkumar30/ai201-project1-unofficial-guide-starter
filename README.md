@@ -2,6 +2,8 @@
 
 This project is a small RAG system for ASU Computer Science undergraduate course planning. It combines official ASU sources with unofficial student-experience sources so students can ask grounded questions about degree requirements, sequencing, advising, tutoring, and course workload.
 
+Demo Link: https://www.youtube.com/watch?v=iPOysvXrRjM
+
 ## Domain
 
 The domain is an unofficial ASU Computer Science course planning and workload guide. It is useful because ASU CS students often need both official rules and practical student experience before making schedule decisions. Official ASU pages explain requirements, prerequisites, major maps, General Studies rules, advising, and tutoring, but they do not usually answer questions like whether CSE 330, CSE 340, and CSE 355 feel manageable together.
