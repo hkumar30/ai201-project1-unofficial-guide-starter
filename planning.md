@@ -86,7 +86,7 @@ Use `all-MiniLM-L6-v2` through `sentence-transformers`. It is a good baseline fo
 
 **Top-k:**
 
-Retrieve the top 6 chunks per query from ChromaDB. Six chunks should usually provide enough context to combine official ASU requirements with one or two relevant unofficial student-experience chunks without overwhelming the generation step. For questions about requirements, prerequisites, advising, General Studies, or tutoring, the response should prefer official ASU chunks even if Reddit chunks also appear in the result set.
+Retrieve up to the top 5 chunks per query from ChromaDB. Five chunks should usually provide enough context to combine official ASU requirements with one or two relevant unofficial student-experience chunks without overwhelming the generation step. For questions about requirements, prerequisites, advising, General Studies, or tutoring, the retriever can query a larger candidate set and apply a small metadata-aware rerank so official ASU chunks are preferred even if Reddit or syllabus chunks also appear in the semantic result set. During Milestone 4 inspection, prefer candidates with cosine distance at or below 0.50 so weak matches are easier to spot before generation is added.
 
 **Production tradeoff reflection:**
 
@@ -165,8 +165,8 @@ Embedding + Vector Store
         |
         v
 Retrieval
-  Planned tool: ChromaDB semantic similarity search, top-k = 6,
-  with source authority metadata preserved
+  Planned tool: ChromaDB semantic similarity search, top-k = 5,
+  with source authority metadata preserved and metadata-aware reranking
         |
         v
 Generation
@@ -194,7 +194,7 @@ I plan to use an AI tool to help implement document ingestion and chunking. I wi
 
 **Milestone 4 - Embedding and retrieval:**
 
-I plan to use an AI tool to help implement embeddings and vector search. I will give it the Retrieval Approach section, Architecture diagram, and the finalized chunk format from Milestone 3. I expect it to produce code that embeds chunks with `all-MiniLM-L6-v2`, stores them in ChromaDB with metadata, and retrieves the top 6 relevant chunks for a query. I will verify the output by running the evaluation questions and checking whether retrieved chunks come from the expected official or unofficial source categories.
+I plan to use an AI tool to help implement embeddings and vector search. I will give it the Retrieval Approach section, Architecture diagram, and the finalized chunk format from Milestone 3. I expect it to produce code that embeds chunks with `all-MiniLM-L6-v2`, stores them in ChromaDB with metadata, and retrieves the top 5 relevant chunks for a query. I will verify the output by running the evaluation questions and checking whether retrieved chunks come from the expected official or unofficial source categories.
 
 **Milestone 5 - Generation and interface:**
 

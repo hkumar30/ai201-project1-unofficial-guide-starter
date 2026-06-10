@@ -1,0 +1,173 @@
+Milestone 4 Retrieval Report
+==============================
+Embedding model: all-MiniLM-L6-v2
+Vector store: ChromaDB
+Collection: asu_cs_course_planning
+Stored chunks: 51
+Input chunks: 51
+Top-k: 5
+Distance metric: cosine distance; lower is more similar.
+Retrieval note: the script queries extra candidates, then applies a small metadata-aware rerank so official ASU sources are prioritized for official questions.
+Inspection filter: prefer candidates with distance <= 0.50 and rerank_score <= 0.50; fall back to best available only if no candidates pass.
+
+Query 1: Which sources should be treated as authoritative for ASU CS degree requirements?
+Expected: official ASU degree/checksheet, major map, SCAI requirements, General Studies, or catalog-style sources.
+Embedding query: ASU CS degree requirements? official ASU checksheet program requirements major map General Studies catalog
+
+Result 1 | distance=0.2454 | rerank_score=0.0454
+Source: ASU Computer Science BS major map, 2024-2025
+Type: official_asu_catalog_degree_page
+Authority: authoritative_official_catalog_year_specific
+Chunk index: 1
+Source 3: ASU Computer Science BS major map, 2024-2025 Source type:
+official_asu_catalog_degree_page Authority: authoritative_official_catalog_year_specific
+Courses: CSE Chunk: 1  Computer Science,BS | Major Map | ASU Degree Search  Sign In  Major Map
+Computer Science , BS  Academic programs  /  Undergraduate degrees  /  Computer Science  /
+Major Map  Sign in  to save your search results for later use.  Major Map  2024 - 2025 Catalog
+Year  General Studies Gold  Degree:  BS  College/School:  Ira A. Fulton Schools of Engineering
+ESCSEBS  Request info  Hide Course List(s)/Track Group(s)  Term 1  0 - 15 Credit Hours  Critical
+course signified by  Hours  Minimum Grade  Notes  CSE 110: Principles of Programming (QTRS OR
+CS)  3  C  ASU 101-CAI: The ASU Experience  1  ENG 101 or ENG 102: First-Year Composition OR ENG
+105: Advanced First-Year Composition OR ENG 107 or ENG 108: First-Year Compo
+
+Result 2 | distance=0.2843 | rerank_score=0.0843
+Source: ASU Computer Science BS program requirements, 2025-2026
+Type: official_asu_catalog_degree_page
+Authority: authoritative_official_catalog_year_specific
+Chunk index: 1
+Source 2: ASU Computer Science BS program requirements, 2025-2026 Source type:
+official_asu_catalog_degree_page Authority: authoritative_official_catalog_year_specific
+Courses: CSE Chunk: 1  Computer Science,BS | Program Requirements | ASU Degree Search  Sign In
+Program Requirement  Computer Science, BS  Academic programs  /  Undergraduate degrees  /
+Computer Science  /  2025-2026 Curriculum  Sign in  to save your search results for later use.
+Program details  Catalog Year: 2025 - 2026  General Studies Gold  Degree: Bachelor of Science,
+BS  College/School:  Ira A. Fulton Schools of Engineering  Plan Code: ESCSEBS  View program
+description  120  minimum credit hours  46  Upper division minimum credit hours  Curriculum
+Checksheet  Expand all course lists  Requirement  Minimum Grade  Credit Hours  Requirement
+Minimum Grade  Credit Hours  Some ASU Online courses are only offered in speci
+
+Result 3 | distance=0.3331 | rerank_score=0.1331
+Source: ASU Computer Science BS major map, 2024-2025
+Type: official_asu_catalog_degree_page
+Authority: authoritative_official_catalog_year_specific
+Chunk index: 4
+Source 3: ASU Computer Science BS major map, 2024-2025 Source type:
+official_asu_catalog_degree_page Authority: authoritative_official_catalog_year_specific
+Courses: CSE Chunk: 4  Term 4 46 - 62 Credit Hours CSE 230: Computer Organization and Assembly
+Language Programming Hours: 3 Minimum Grade: C CSE 310: Data Structures and Algorithms Hours: 3
+Minimum Grade: C IEE 380: Probability and Statistics for Engineering Problem Solving (QTRS OR
+CS) Hours: 3 Minimum Grade: C Scientific Thinking in Natural Sciences (SCIT) Hours: 4 Social and
+Behavioral Sciences (SOBE) Hours: 3 Complete CSE 259 OR MAT 267 OR MAT 272 course(s). Minimum
+2.00 GPA ASU Cumulative. Notes: Pursue an undergraduate research experience . Apply for
+internships . Attend career fairs and events . Term 5 62 - 78 Credit Hours CSE 355: Introduction
+to Theoretical Computer Science Hours: 3 Minimum Grade: C CSE 301: Computing Ethic
+
+Result 4 | distance=0.3777 | rerank_score=0.1777
+Source: ASU undergraduate General Studies requirement
+Type: official_asu_catalog_degree_page
+Authority: authoritative_official
+Chunk index: 5
+Source 5: ASU undergraduate General Studies requirement Source type:
+official_asu_catalog_degree_page Authority: authoritative_official Courses: None Chunk: 5  that
+indicate their capacities and limits trace historical impacts of a range of socioeconomic,
+political or cultural choices on integrated human-environmental well-being envision pathways
+toward futures characterized by integrated human-environmental well-being articulate an approach
+to addressing contemporary questions or challenges that employs concepts or practices of
+sustainability Meeting the general studies requirement All students enrolled in a baccalaureate
+or associate degree program must successfully complete a minimum of 35 credit hours of approved
+general studies courses. There is no limit to the number of Advanced Placement credits that can
+be used to meet the general studies requirement. Credits earned through Colle
+
+Result 5 | distance=0.3813 | rerank_score=0.1813
+Source: ASU undergraduate General Studies requirement
+Type: official_asu_catalog_degree_page
+Authority: authoritative_official
+Chunk index: 6
+Source 5: ASU undergraduate General Studies requirement Source type:
+official_asu_catalog_degree_page Authority: authoritative_official Courses: None Chunk: 6
+complete three credit hours from courses designated as L. Students must have completed ENG 101,
+ENG 105 or ENG 107 to take an L course. The three credit hours required to meet the general
+studies L requirement are in addition to the upper-division L university graduation requirement.
+Students should review the university baccalaureate graduation requirements for more
+information. MA and CS: Mathematical Studies (combined six credit hours) This core area has two
+categories. Mathematics (MA) is the acquisition of essential skills in basic mathematics.
+Computer/statistics/quantitative applications (CS) involves applying mathematical reasoning and
+requires students to complete a course in either the use of statistics and quantitative
+
+------------------------------
+
+Query 2: Which sources should answer questions about where to get tutoring for CSE courses?
+Expected: FSE PULSE Tutoring Centers or other official tutoring support content.
+Embedding query: where to get tutoring for CSE courses? FSE PULSE Tutoring Centers academic support CSE tutoring
+
+Result 1 | distance=0.3375 | rerank_score=0.0575
+Source: FSE PULSE Tutoring Centers
+Type: official_asu_page
+Authority: authoritative_official
+Chunk index: 1
+Source 10: FSE PULSE Tutoring Centers Source type: official_asu_page Authority:
+authoritative_official Courses: CSE Chunk: 1  Tutoring – ASU Engineering Student Hub  FSE PULSE
+Tutoring Centers  Providing in-person and online tutoring to students in the Fulton Schools  Get
+Summer tutoring now!  Monday to Friday, 9 AM to 5 PM!  The Fulton Schools of Engineering
+Tutoring Centers offer free, drop-in tutoring, workshops, and review sessions to undergraduate
+students at multiple locations on campus as well as online. Tutors are Fulton students who excel
+in their coursework and provide academic support in physics, math, computer science, and various
+engineering disciplines.  The centers aim to help students succeed in their academic careers by:
+Increasing student retention  Improving academic performance  Encouraging independent learning
+Creating a supportive environment  Supporting the ASU A
+
+------------------------------
+
+Query 3: Which sources should answer questions about scheduling or using SCAI advising?
+Expected: SCAI Advising and SCAI Advising Appointments content.
+Embedding query: scheduling or using SCAI advising? SCAI Advising Appointments schedule advisor express advising
+
+Result 1 | distance=0.1859 | rerank_score=-0.0341
+Source: SCAI Advising Appointments
+Type: official_asu_page
+Authority: authoritative_official
+Chunk index: 1
+Source 12: SCAI Advising Appointments Source type: official_asu_page Authority:
+authoritative_official Courses: CSE Chunk: 1  SCAI advising appointments - School of Computing
+and Augmented Intelligence  Advising appointments  Graduate and undergraduate advisors are
+available during our regular business hours, Monday – Friday 8AM – 5PM Arizona time.  We offer
+express advising during the first few weeks of school in order to help as many students as
+possible. Express advising will be available exclusively via Zoom for the start of the Fall and
+Spring semesters. For information on Express Advising, to view the Express Advising schedule,
+and to sign into Express Advising (during scheduled Express hours) please go to  .  SCAI
+Advising appointments will be regularly available via zoom, phone and in person following the
+first two weeks of school by going to  . We are committed to being able to
+
+Result 2 | distance=0.2431 | rerank_score=0.0231
+Source: SCAI Advising
+Type: official_asu_page
+Authority: authoritative_official
+Chunk index: 1
+Source 11: SCAI Advising Source type: official_asu_page Authority: authoritative_official
+Courses: CSE Chunk: 1  Advising - School of Computing and Augmented Intelligence  Welcome to
+SCAI Advising  SCAI Advising Mission:  To guide and transform learning and educational
+experiences, to encourage responsibility, independence, and professional behavior, and to build
+communities that respect and value diversity.  Express Advising Information  Express Advising is
+a “Sign-In & Wait Your Turn” advising format that focuses on enrollment as well as deadline
+sensitive advising issues.  Information on Express Advising, including scheduled Express
+Advising hours, can be found at  .  Sign-in for Express Advising is only available during
+scheduled hours and students are not able to sign-in early for future Express Advising hours.
+Before you schedule an appointment  SCAI undergraduate admission requir
+
+Result 3 | distance=0.3701 | rerank_score=0.1501
+Source: SCAI Advising Appointments
+Type: official_asu_page
+Authority: authoritative_official
+Chunk index: 2
+Source 12: SCAI Advising Appointments Source type: official_asu_page Authority:
+authoritative_official Courses: CSE Chunk: 2  follow-up advising appointment. Preparing for a
+meeting with your advisor Be ready to discuss your situation, plans, and goals with an open
+mind. Be honest with your advisor and yourself. Be prepared to discuss the information you have
+gathered that is relevant to your goals for the meeting. Ask questions! This is your chance to
+find out everything you ever wanted to know about your situation at ASU. Make sure you leave
+with copies of notes taken and materials given to you during your appointment. Prospective
+Graduate and Undergraduate Transfer Students: Please bring a copy of your transcripts with you
+or forward a copy to the advisor before your scheduled appointment. SCAI Academic Advising
+Center at Tempe campus Phone: 480-965-3199  Physical Address: Centerpoint
+
+------------------------------
