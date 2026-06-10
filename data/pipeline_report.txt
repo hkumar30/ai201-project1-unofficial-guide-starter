@@ -1,0 +1,138 @@
+Milestone 3 Document Pipeline Report
+======================================
+Loaded documents: 19
+Total chunks: 51
+Chunk token count: min=187, avg=614.5, max=818
+
+Chunks by source:
+- Source 1: ASU Computer Science BS program page -> 1 chunks
+- Source 2: ASU Computer Science BS program requirements, 2025-2026 -> 3 chunks
+- Source 3: ASU Computer Science BS major map, 2024-2025 -> 5 chunks
+- Source 4: SCAI CS BS degree requirements page -> 2 chunks
+- Source 5: ASU undergraduate General Studies requirement -> 7 chunks
+- Source 7: CSE 205 syllabus, Spring 2025 -> 7 chunks
+- Source 8: CSE 310 syllabus, Spring 2025 -> 3 chunks
+- Source 9: CSE 355 syllabus, Spring 2025 -> 2 chunks
+- Source 10: FSE PULSE Tutoring Centers -> 1 chunks
+- Source 11: SCAI Advising -> 2 chunks
+- Source 12: SCAI Advising Appointments -> 2 chunks
+- Source 13: CSE 340 Spring 2025 syllabus -> 4 chunks
+- Source 14: ASU CS Wiki: CSE 340 -> 1 chunks
+- Source 15: Reddit: Are the CS trifecta courses really that hard? -> 2 chunks
+- Source 16: Reddit: CSE 340, 330, 355 -> 3 chunks
+- Source 17: Reddit: How to prepare for CSE 355 and CSE 340? -> 1 chunks
+- Source 18: Reddit: How do I prepare for CSE 355? -> 3 chunks
+- Source 19: Reddit: Preparation for CSE 310 -> 1 chunks
+- Source 20: Reddit: Upper Division Technical Electives -> 1 chunks
+
+Load errors:
+- Source 6 (ASU Class Search: CSE courses) failed: cleaned text has only 2 tokens; likely dynamic or blocked
+
+Cleaned document preview:
+Source 1: ASU Computer Science BS program page
+Computer science (BS) - School of Computing and Augmented Intelligence  Computer science (BS)
+Become a part of the computing evolution with innovative curriculum and cutting-edge research
+experiences.  Students working towards the bachelor of science (BS) degree in computer science
+at the School of Computing and Augmented Intelligence will learn to solve technical problems
+requiring critical and creative thinking in traditional and innovative computer science
+applications. The coursework will challenge students to apply design and development principles
+in the construction of software systems of varying complexity and to communicate effectively
+with a wide range of audiences.  The computer science (BS) program also offers students the
+chance to focus their degree on either software engineering (SE) or cybersecurity.
+Concentrations allow students to take core classes within a subject area that will meet the
+computer science and/or technical elective requirements within one’s degree.  We are pleased to
+also offer an online computer science bachelor’s degree offering through ASU Online. Students in
+the School of Computing and Augmented Intelligence will now be able to access the same
+curriculum and award-winning computer science faculty in an online format, helping build a
+foundation for all to be successful.  Degree offered  Computer science (BS) with concentrations
+in cybersecu
+
+5 random chunk previews:
+
+Random chunk 1: source-15-chunk-001 (433 tokens)
+Source 15: Reddit: Are the CS trifecta courses really that hard? Source type:
+reddit_student_experience Authority: unofficial_context_only Courses: CSE 330, CSE 340, CSE 355
+Chunk: 1  Original post title: Are the Computer Science trifecta courses really that hard?
+Original post: Hello, I will be taking the all three trifecta courses (CSE 330, CSE 340, CSE
+355) together next year and have heard that these are really tough courses. I would like to get
+an opinion from people who know about these courses and/or have taken them. Alongside them, I
+will be taking Linear Algebra and an upper division HU/SB. I have heard these classes are pretty
+easy, so hopefully that will allot me more time to focus on the trifecta courses. I don't think
+there's much I can do to move around my schedule, but suggestions are always appreciated. If I
+can get some advice, opinions, or reassurance about my schedule for that semester, it would be
+greatly appreciated.  Comment: I think this mostly depends on the professors. I have taken 330,
+340, and 355 with Zhao, Bazzi, and Colbourn respectively. 330 - not conceptually difficult,
+projects might be hard but you get a teammate, exams are kinda a joke (open book). I heard
+Banerjee's class is much easier than Zhao tho 340 - not conceptually difficult, projects are
+LONG but not hard especially if you have good programming skills, exams are easy if you study a
+
+Random chunk 2: source-03-chunk-004 (806 tokens)
+Source 3: ASU Computer Science BS major map, 2024-2025 Source type:
+official_asu_catalog_degree_page Authority: authoritative_official_catalog_year_specific
+Courses: CSE Chunk: 4  Term 4 46 - 62 Credit Hours CSE 230: Computer Organization and Assembly
+Language Programming Hours: 3 Minimum Grade: C CSE 310: Data Structures and Algorithms Hours: 3
+Minimum Grade: C IEE 380: Probability and Statistics for Engineering Problem Solving (QTRS OR
+CS) Hours: 3 Minimum Grade: C Scientific Thinking in Natural Sciences (SCIT) Hours: 4 Social and
+Behavioral Sciences (SOBE) Hours: 3 Complete CSE 259 OR MAT 267 OR MAT 272 course(s). Minimum
+2.00 GPA ASU Cumulative. Notes: Pursue an undergraduate research experience . Apply for
+internships . Attend career fairs and events . Term 5 62 - 78 Credit Hours CSE 355: Introduction
+to Theoretical Computer Science Hours: 3 Minimum Grade: C CSE 301: Computing Ethics Hours: 1
+Minimum Grade: C  CSE 360: Introduction to Software Engineering  Hours: 3  Minimum Grade: C  CSE
+365: Information Assurance  Hours: 3  Minimum Grade: C  MAT 343: Applied Linear Algebra  Hours:
+3  Minimum Grade: C  American Institutions (AMIT)  Hours: 3  Notes:  Plan for success using the
+Junior Guide . Network at student organization competitions or professional societies.  Term 6
+78 - 93 Credit Hours  CSE 340: Principles of Programming Languages  Hours: 3  Minimum Grade: C
+CSE 330
+
+Random chunk 3: source-02-chunk-001 (817 tokens)
+Source 2: ASU Computer Science BS program requirements, 2025-2026 Source type:
+official_asu_catalog_degree_page Authority: authoritative_official_catalog_year_specific
+Courses: CSE Chunk: 1  Computer Science,BS | Program Requirements | ASU Degree Search  Sign In
+Program Requirement  Computer Science, BS  Academic programs  /  Undergraduate degrees  /
+Computer Science  /  2025-2026 Curriculum  Sign in  to save your search results for later use.
+Program details  Catalog Year: 2025 - 2026  General Studies Gold  Degree: Bachelor of Science,
+BS  College/School:  Ira A. Fulton Schools of Engineering  Plan Code: ESCSEBS  View program
+description  120  minimum credit hours  46  Upper division minimum credit hours  Curriculum
+Checksheet  Expand all course lists  Requirement  Minimum Grade  Credit Hours  Requirement
+Minimum Grade  Credit Hours  Some ASU Online courses are only offered in specific sessions.
+Please see advising for course planning.  Please see our degree requirements website for links
+to our flowcharts and our most up to date course lists. Tempe Campus:  Online Campus:  Computer
+Science Lower Division  CSE 110 Principles of Programming  (QTRS)  3 Credit Hours  Minimum
+Grade:C  C  3  EEE 120 Digital Design Fundamentals  3 Credit Hours  Minimum Grade:C  C  3  CSE
+205 Object-Oriented Programming and Data Structures  (QTRS)  3 Credit Hours  Minimum Grade:C  C
+3  CSE 230 C
+
+Random chunk 4: source-18-chunk-002 (459 tokens)
+Source 18: Reddit: How do I prepare for CSE 355? Source type: reddit_student_experience
+Authority: unofficial_context_only Courses: CSE 355 Chunk: 2  Comment: review cse 120 finite
+state machines and mat 243 proofs, it's hard but not too bad just pay attention in class and
+review material and the easy theory videos, I just took it with Lee in the spring and got an A-
+without much struggle  Comment: easy theory on youtube and I highly recommend the sipser
+textbook. gl!  Comment: You can study automata, but like the other comment suggested, this is
+kind of the only class that covers it. You can probably learn some online, and if you’ve already
+taken 340 it’s just applied 355, so that can be pretty helpful if that’s the case. Honestly
+though, the place that most people struggle IMO is in proofs, as all they have is MAT 243, which
+the jump between that and 355 can be a lot. The best solution would be to just pick up a math
+major, but I know CS is tough enough and adding on a second major just for one class is
+overkill, so here’s some more non-overkill suggestions. There’s going to be a lot of set theory
+in terms of the symbols, so it can be nice to feel comfortable with those, as you can spend more
+time on the ideas being presented rather than trying to understand what the math notation is
+trying to say.  You definitely do not need to be an expert in set theory by any means, I thin
+
+Random chunk 5: source-05-chunk-007 (770 tokens)
+Source 5: ASU undergraduate General Studies requirement Source type:
+official_asu_catalog_degree_page Authority: authoritative_official Courses: None Chunk: 7  at
+least four credit hours must be in the SQ category. Three awareness areas (general studies)
+Students must complete courses that satisfy three awareness areas. Courses that are listed for a
+core area and one or more awareness areas may satisfy requirements concurrently, up to a maximum
+of two of the awareness areas listed for that course. These awareness areas promote appreciation
+of cultural diversity within the contemporary U.S., the development of an international
+perspective and an understanding of current human events through study of the past. 1. Cultural
+Diversity in the United States (C) The objective of the Cultural Diversity in the United States
+(C) requirement is to promote awareness and appreciation of cultural diversity within the
+contemporary U.S.  This is accomplished through the study of the cultural, social or scientific
+contributions of women and minority groups, examination of their experiences in the U.S., or
+exploration of successful or unsuccessful interactions between and among cultural groups.
+Awareness of cultural diversity and its multiple sources can illuminate the collective past,
+present and future and also help students achieve greater mutual understanding and respect. 2.
+Global Awareness
