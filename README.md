@@ -13,6 +13,8 @@
      Why is this knowledge valuable, and why is it hard to find through official channels?
      Example: "Student reviews of CS professors at [university] — useful because official
      course descriptions don't reflect teaching style, exam difficulty, or workload." -->
+     
+Student-reported workload, difficulty, and planning advice for Arizona State University Computer Science courses - valuable because official ASU sources cover requirements and prerequisites but don't reflect real course demands, common pitfalls, or whether certain combinations are too heavy to take together.
 
 ---
 
@@ -24,16 +26,26 @@
 
 | # | Source | Type | URL or file path |
 |---|--------|------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| 1 | ASU Computer Science BS program page | Official ASU source; authoritative for program overview, degree framing, and major map context. Helps answer what the ASU CS BS program covers. | https://scai.engineering.asu.edu/computer-science-bs/ |
+| 2 | ASU Computer Science BS program requirements, 2025-2026 | Official ASU catalog/degree source; authoritative for 2025-2026 degree requirements and credit structure. | https://degrees.apps.asu.edu/checksheet/2025/CES/ESCSEBS/null |
+| 3 | ASU Computer Science BS major map, 2024-2025 | Official ASU catalog/degree source; authoritative for 2024-2025 semester-by-semester course sequencing. | https://degrees.apps.asu.edu/major-map/ASU00/ESCSEBS/null/ALL/2024 |
+| 4 | SCAI CS BS degree requirements page | Official ASU source; authoritative for degree requirements, curriculum updates, and General Studies guidance. | https://scai.engineering.asu.edu/computer-science-bs/degree-requirements/ |
+| 5 | ASU undergraduate General Studies requirement | Official ASU catalog source; authoritative for university-wide General Studies requirements. | https://catalog.asu.edu/ug_gsr |
+| 6 | ASU Class Search: CSE courses | Official ASU catalog source; authoritative for term-specific CSE course offerings and catalog-style course information. | https://catalog.apps.asu.edu/catalog/classes/classlist?campusOrOnlineSelection=A&honors=F&promod=F&searchType=all&subject=CSE&term=2257 |
+| 7 | CSE 205 syllabus, Spring 2025 | Official ASU PDF; authoritative for Spring 2025 CSE 205 course-level details, topics, and expectations. | https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-205-Syllabus-SP25.pdf |
+| 8 | CSE 310 syllabus, Spring 2025 | Official ASU PDF; authoritative for Spring 2025 CSE 310 course-level details, topics, and expectations. | https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-310-Syllabus-SP25.pdf |
+| 9 | CSE 355 syllabus, Spring 2025 | Official ASU PDF; authoritative for Spring 2025 CSE 355 course-level details, topics, and expectations. | https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-355-Syllabus-SP25.pdf |
+| 10 | FSE PULSE Tutoring Centers | Official ASU source; authoritative for tutoring and academic support resources. | https://students.engineering.asu.edu/pulse/tutoring/ |
+| 11 | SCAI Advising | Official ASU source; authoritative for advising resources and advising contacts. | https://scai.engineering.asu.edu/advising/ |
+| 12 | SCAI Advising Appointments | Official ASU source; authoritative for how to schedule or understand SCAI advising appointments. | https://scai.engineering.asu.edu/scai-advising-appointments/ |
+| 13 | CSE 340 Spring 2025 syllabus | Official ASU PDF; authoritative for Spring 2025 CSE 340 course-level details, topics, and expectations. | https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf |
+| 14 | ASU CS Wiki: CSE 340 | Student-maintained unofficial source; useful for student-facing explanation of CSE 340 topics and expectations. | https://wiki.thesoda.io/courses/cse-340/ |
+| 15 | Reddit: Are the CS trifecta courses really that hard? | Unofficial student-experience source; useful for student workload discussion about CSE 330, CSE 340, and CSE 355. | https://www.reddit.com/r/ASU/comments/tna185/are_the_computer_science_trifecta_courses_really/ |
+| 16 | Reddit: CSE 340, 330, 355 | Unofficial student-experience source; useful for student discussion about differences between the "trifecta" courses. | https://www.reddit.com/r/ASU/comments/k8y7si/cse_340_330_355/ |
+| 17 | Reddit: How to prepare for CSE 355 and CSE 340? | Unofficial student-experience source; useful for student preparation advice for CSE 355 and CSE 340. | https://www.reddit.com/r/ASU/comments/w89geu/how_to_prepare_for_cse_355_and_cse_340_what/ |
+| 18 | Reddit: How do I prepare for CSE 355? | Unofficial student-experience source; useful for student advice about preparing for CSE 355. | https://www.reddit.com/r/ASU/comments/13yvlki/how_do_i_prepare_for_cse_355/ |
+| 19 | Reddit: Preparation for CSE 310 | Unofficial student-experience source; useful for student preparation advice for CSE 310. | https://www.reddit.com/r/ASU/comments/18gk8ok/preparation_for_cse310/ |
+| 20 | Reddit: Upper Division Technical Electives | Unofficial student-experience source; useful for student discussion of upper-division technical electives. | https://www.reddit.com/r/ASU/comments/dewiz2/upper_division_technical_electives/ |
 
 ---
 
