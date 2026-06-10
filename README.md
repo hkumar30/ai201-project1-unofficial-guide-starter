@@ -1,174 +1,171 @@
-# The Unofficial Guide — Project 1
+# The Unofficial Guide: ASU Computer Science Course Planning and Workload Guide 
 
-> **How to use this template:**
-> Complete each section *after* you've built and tested the corresponding part of your system.
-> Do not write placeholder text — if a section isn't done yet, leave it blank and come back.
-> Every section below is required for submission. One-liners will not receive full credit.
-
----
+This project is a small RAG system for ASU Computer Science undergraduate course planning. It combines official ASU sources with unofficial student-experience sources so students can ask grounded questions about degree requirements, sequencing, advising, tutoring, and course workload.
 
 ## Domain
 
-<!-- What topic or category of knowledge does your system cover?
-     Why is this knowledge valuable, and why is it hard to find through official channels?
-     Example: "Student reviews of CS professors at [university] — useful because official
-     course descriptions don't reflect teaching style, exam difficulty, or workload." -->
-     
-Student-reported workload, difficulty, and planning advice for Arizona State University Computer Science courses - valuable because official ASU sources cover requirements and prerequisites but don't reflect real course demands, common pitfalls, or whether certain combinations are too heavy to take together.
+The domain is an unofficial ASU Computer Science course planning and workload guide. It is useful because ASU CS students often need both official rules and practical student experience before making schedule decisions. Official ASU pages explain requirements, prerequisites, major maps, General Studies rules, advising, and tutoring, but they do not usually answer questions like whether CSE 330, CSE 340, and CSE 355 feel manageable together.
 
----
+This knowledge is hard to find in one place because the official information is spread across ASU degree pages, major maps, catalog pages, syllabi, advising pages, and tutoring pages. The unofficial information is scattered across Reddit threads and a student-maintained course wiki. The system treats official ASU sources as authoritative for requirements and uses Reddit/student-maintained sources only for workload impressions, preparation advice, and student perspective.
 
 ## Document Sources
 
-<!-- List every source you collected documents from.
-     Be specific: include URLs, subreddit names, forum thread titles, or file names.
-     Aim for variety — sources that together cover different subtopics or perspectives. -->
-
 | # | Source | Type | URL or file path |
 |---|--------|------|-----------------|
-| 1 | ASU Computer Science BS program page | Official ASU source; authoritative for program overview, degree framing, and major map context. Helps answer what the ASU CS BS program covers. | https://scai.engineering.asu.edu/computer-science-bs/ |
-| 2 | ASU Computer Science BS program requirements, 2025-2026 | Official ASU catalog/degree source; authoritative for 2025-2026 degree requirements and credit structure. | https://degrees.apps.asu.edu/checksheet/2025/CES/ESCSEBS/null |
-| 3 | ASU Computer Science BS major map, 2024-2025 | Official ASU catalog/degree source; authoritative for 2024-2025 semester-by-semester course sequencing. | https://degrees.apps.asu.edu/major-map/ASU00/ESCSEBS/null/ALL/2024 |
-| 4 | SCAI CS BS degree requirements page | Official ASU source; authoritative for degree requirements, curriculum updates, and General Studies guidance. | https://scai.engineering.asu.edu/computer-science-bs/degree-requirements/ |
-| 5 | ASU undergraduate General Studies requirement | Official ASU catalog source; authoritative for university-wide General Studies requirements. | https://catalog.asu.edu/ug_gsr |
-| 6 | ASU Class Search: CSE courses | Official ASU catalog source; authoritative for term-specific CSE course offerings and catalog-style course information. | https://catalog.apps.asu.edu/catalog/classes/classlist?campusOrOnlineSelection=A&honors=F&promod=F&searchType=all&subject=CSE&term=2257 |
-| 7 | CSE 205 syllabus, Spring 2025 | Official ASU PDF; authoritative for Spring 2025 CSE 205 course-level details, topics, and expectations. | https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-205-Syllabus-SP25.pdf |
-| 8 | CSE 310 syllabus, Spring 2025 | Official ASU PDF; authoritative for Spring 2025 CSE 310 course-level details, topics, and expectations. | https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-310-Syllabus-SP25.pdf |
-| 9 | CSE 355 syllabus, Spring 2025 | Official ASU PDF; authoritative for Spring 2025 CSE 355 course-level details, topics, and expectations. | https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-355-Syllabus-SP25.pdf |
-| 10 | FSE PULSE Tutoring Centers | Official ASU source; authoritative for tutoring and academic support resources. | https://students.engineering.asu.edu/pulse/tutoring/ |
-| 11 | SCAI Advising | Official ASU source; authoritative for advising resources and advising contacts. | https://scai.engineering.asu.edu/advising/ |
-| 12 | SCAI Advising Appointments | Official ASU source; authoritative for how to schedule or understand SCAI advising appointments. | https://scai.engineering.asu.edu/scai-advising-appointments/ |
-| 13 | CSE 340 Spring 2025 syllabus | Official ASU PDF; authoritative for Spring 2025 CSE 340 course-level details, topics, and expectations. | https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf |
-| 14 | ASU CS Wiki: CSE 340 | Student-maintained unofficial source; useful for student-facing explanation of CSE 340 topics and expectations. | https://wiki.thesoda.io/courses/cse-340/ |
-| 15 | Reddit: Are the CS trifecta courses really that hard? | Unofficial student-experience source; useful for student workload discussion about CSE 330, CSE 340, and CSE 355. | https://www.reddit.com/r/ASU/comments/tna185/are_the_computer_science_trifecta_courses_really/ |
-| 16 | Reddit: CSE 340, 330, 355 | Unofficial student-experience source; useful for student discussion about differences between the "trifecta" courses. | https://www.reddit.com/r/ASU/comments/k8y7si/cse_340_330_355/ |
-| 17 | Reddit: How to prepare for CSE 355 and CSE 340? | Unofficial student-experience source; useful for student preparation advice for CSE 355 and CSE 340. | https://www.reddit.com/r/ASU/comments/w89geu/how_to_prepare_for_cse_355_and_cse_340_what/ |
-| 18 | Reddit: How do I prepare for CSE 355? | Unofficial student-experience source; useful for student advice about preparing for CSE 355. | https://www.reddit.com/r/ASU/comments/13yvlki/how_do_i_prepare_for_cse_355/ |
-| 19 | Reddit: Preparation for CSE 310 | Unofficial student-experience source; useful for student preparation advice for CSE 310. | https://www.reddit.com/r/ASU/comments/18gk8ok/preparation_for_cse310/ |
-| 20 | Reddit: Upper Division Technical Electives | Unofficial student-experience source; useful for student discussion of upper-division technical electives. | https://www.reddit.com/r/ASU/comments/dewiz2/upper_division_technical_electives/ |
+| 1 | ASU Computer Science BS program page | Official ASU source | https://scai.engineering.asu.edu/computer-science-bs/ |
+| 2 | ASU Computer Science BS program requirements, 2025-2026 | Official ASU catalog/degree source | https://degrees.apps.asu.edu/checksheet/2025/CES/ESCSEBS/null |
+| 3 | ASU Computer Science BS major map, 2024-2025 | Official ASU catalog/degree source | https://degrees.apps.asu.edu/major-map/ASU00/ESCSEBS/null/ALL/2024 |
+| 4 | SCAI CS BS degree requirements page | Official ASU source | https://scai.engineering.asu.edu/computer-science-bs/degree-requirements/ |
+| 5 | ASU undergraduate General Studies requirement | Official ASU catalog source | https://catalog.asu.edu/ug_gsr |
+| 6 | ASU Class Search: CSE courses | Official ASU catalog source | https://catalog.apps.asu.edu/catalog/classes/classlist?campusOrOnlineSelection=A&honors=F&promod=F&searchType=all&subject=CSE&term=2257 |
+| 7 | CSE 205 syllabus, Spring 2025 | Official ASU PDF | documents/CSE-205-Syllabus-SP25.pdf |
+| 8 | CSE 310 syllabus, Spring 2025 | Official ASU PDF | documents/CSE-310-Syllabus-SP25.pdf |
+| 9 | CSE 355 syllabus, Spring 2025 | Official ASU PDF | documents/CSE-355-Syllabus-SP25.pdf |
+| 10 | FSE PULSE Tutoring Centers | Official ASU source | https://students.engineering.asu.edu/pulse/tutoring/ |
+| 11 | SCAI Advising | Official ASU source | https://scai.engineering.asu.edu/advising/ |
+| 12 | SCAI Advising Appointments | Official ASU source | https://scai.engineering.asu.edu/scai-advising-appointments/ |
+| 13 | CSE 340 Spring 2025 syllabus | Official ASU PDF | documents/CSE-340-Syllabus-SP25.pdf |
+| 14 | ASU CS Wiki: CSE 340 | Student-maintained unofficial source | https://wiki.thesoda.io/courses/cse-340/ |
+| 15 | Reddit: Are the CS trifecta courses really that hard? | Reddit/student-experience source | https://www.reddit.com/r/ASU/comments/tna185/are_the_computer_science_trifecta_courses_really/ |
+| 16 | Reddit: CSE 340, 330, 355 | Reddit/student-experience source | https://www.reddit.com/r/ASU/comments/k8y7si/cse_340_330_355/ |
+| 17 | Reddit: How to prepare for CSE 355 and CSE 340? | Reddit/student-experience source | https://www.reddit.com/r/ASU/comments/w89geu/how_to_prepare_for_cse_355_and_cse_340_what/ |
+| 18 | Reddit: How do I prepare for CSE 355? | Reddit/student-experience source | https://www.reddit.com/r/ASU/comments/13yvlki/how_do_i_prepare_for_cse_355/ |
+| 19 | Reddit: Preparation for CSE 310 | Reddit/student-experience source | https://www.reddit.com/r/ASU/comments/18gk8ok/preparation_for_cse310/ |
+| 20 | Reddit: Upper Division Technical Electives | Reddit/student-experience source | https://www.reddit.com/r/ASU/comments/dewiz2/upper_division_technical_electives/ |
 
----
+The pipeline loaded 19 of the 20 sources. Source 6, ASU Class Search, produced only 2 cleaned tokens because the page is dynamic or blocked, so the pipeline recorded it as a load error instead of creating empty or misleading chunks.
 
 ## Chunking Strategy
 
-<!-- Describe your chunking approach with enough specificity that someone else could reproduce it.
-     Include:
-     - Chunk size (characters or tokens) and why that size fits your documents
-     - Overlap size and why (or why not) you used overlap
-     - Any preprocessing you did before chunking (e.g., stripping HTML, removing headers)
-     - What your final chunk count was across all documents -->
-
 **Chunk size:**
+
+Official pages, degree pages, syllabi, and wiki pages: target 800 tokens, hard max 1,000 tokens. Reddit/student-experience sources: target 450 tokens, hard max 550 tokens.
 
 **Overlap:**
 
+Official/wiki/PDF chunks: 120 tokens. Reddit chunks: 0 tokens.
+
 **Why these choices fit your documents:**
+
+Official ASU pages and syllabi are long and structured, so larger chunks preserve requirements, course topics, and surrounding context. Reddit threads are shorter and opinion-based, so smaller chunks keep student advice focused without overweighting repeated comments.
 
 **Final chunk count:**
 
----
+51 chunks across 19 loaded documents. Chunk sizes ranged from 187 to 818 tokens, with an average of 614.5 tokens.
 
 ## Embedding Model
 
-<!-- Name the embedding model you used and explain your choice.
-     Then answer: if you were deploying this system for real users and cost wasn't a constraint,
-     what tradeoffs would you weigh in choosing a different model?
-     Consider: context length limits, multilingual support, accuracy on domain-specific text,
-     latency, and local vs. API-hosted. -->
-
 **Model used:**
+
+`all-MiniLM-L6-v2` through `sentence-transformers`, stored in ChromaDB. Retrieval returns up to 5 chunks per query.
 
 **Production tradeoff reflection:**
 
----
+For a real deployment, I would test a larger embedding model against my evaluation questions to see whether it retrieves ASU catalog pages and Reddit advice more reliably. I would also weigh context length, latency, privacy, cost, and whether source-diverse reranking would reduce duplicate results from the same source.
 
 ## Grounded Generation
 
-<!-- Explain how your system enforces grounding — how does it prevent the LLM from answering
-     beyond the retrieved documents?
-     Describe both your system prompt (what instruction you gave the model) and any structural
-     choices (e.g., how you formatted the context, whether you filtered low-relevance chunks).
-     Do not just say "I told it to use the documents" — show the actual instruction or explain
-     the mechanism. -->
-
 **System prompt grounding instruction:**
+
+Groq `llama-3.3-70b-versatile` is instructed to answer only from retrieved context, avoid outside knowledge, and say `I don't have enough information in the provided sources to answer that.` when the context is insufficient.
+
+The prompt also says official ASU sources are authoritative for requirements, prerequisites, catalog rules, advising, and support resources. Reddit and student-maintained sources are limited to workload impressions and preparation advice.
 
 **How source attribution is surfaced in the response:**
 
----
+Each retrieved chunk is labeled `[S1]`, `[S2]`, etc. The model cites those labels in the answer, and `query.py` also returns a separate source list with title, chunk index, distance score, and URL for the Gradio interface.
 
 ## Evaluation Report
 
-<!-- Run your 5 test questions from planning.md through your system and record the results.
-     Be honest — a partially accurate or inaccurate result that you explain well is more
-     valuable than a suspiciously perfect result. -->
-
 | # | Question | Expected answer | System response (summarized) | Retrieval quality | Response accuracy |
 |---|----------|-----------------|------------------------------|-------------------|-------------------|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | Which sources should be treated as authoritative for ASU CS degree requirements? | Should name the ASU CS program requirements/checksheet, major map, SCAI degree requirements page, ASU General Studies page, and ASU Class Search; should say Reddit/wiki are not authoritative. | Cited the ASU major map, ASU program requirements/checksheet, and General Studies page. It correctly said official ASU sources take precedence and recommended verifying schedule changes with advising, but it did not mention SCAI degree requirements or ASU Class Search. | Partially relevant | Partially accurate |
+| 2 | Which sources should answer questions about where to get tutoring for CSE courses? | Should point to FSE PULSE Tutoring Centers as the official tutoring and academic support source, not Reddit. | Correctly cited FSE PULSE Tutoring Centers and described free drop-in tutoring, workshops, review sessions, online/on-campus support, and CSE course support. | Relevant | Accurate |
+| 3 | Which sources should answer questions about scheduling or using SCAI advising? | Should point to SCAI Advising and SCAI Advising Appointments as the official advising sources. | Correctly cited SCAI Advising Appointments and SCAI Advising. It described the online appointment scheduling tool, ASURITE login, contact information, and preparing for a meeting. | Relevant | Accurate |
+| 4 | What source types should be used to answer whether CSE 330, CSE 340, and CSE 355 are hard to take together? | Should use Reddit/student-experience sources only for unofficial workload impressions and official ASU sources for requirements, prerequisites, and schedule rules. | Retrieved Reddit/student-experience chunks and correctly framed them as student impressions about difficulty, workload, starting projects early, office hours, and study groups. It did not explicitly add that official ASU sources should still be used for requirements, prerequisites, and schedule rules. | Relevant | Partially accurate |
+| 5 | What sources should be used for CSE 340 course content versus student preparation advice? | Should use the official CSE 340 Spring 2025 syllabus for course content and the ASU CS Wiki or Reddit only for unofficial preparation context. | Correctly separated the official CSE 340 syllabus for course content from Reddit/student wiki sources for preparation advice. It also stated that official ASU sources win if unofficial sources disagree. | Relevant | Accurate |
 
 **Retrieval quality:** Relevant / Partially relevant / Off-target  
 **Response accuracy:** Accurate / Partially accurate / Inaccurate
 
----
+I also tested an out-of-domain question: `Which ASU dining hall has the best late-night food?` The system returned `I don't have enough information in the provided sources to answer that.` This is the desired behavior because dining halls are outside the collected ASU CS course-planning corpus.
 
 ## Failure Case Analysis
 
-<!-- Identify at least one question where retrieval or generation did not work as expected.
-     Write a specific explanation of *why* it failed, tied to a part of the pipeline.
+**Question that failed:** Which sources should be treated as authoritative for ASU CS degree requirements?
 
-     "The answer was wrong" is not an explanation.
+**What the system returned:** The system returned a partially correct answer citing the ASU major map, ASU Computer Science BS program requirements/checksheet, and ASU undergraduate General Studies requirement. It correctly treated official ASU sources as authoritative, but it omitted the SCAI CS BS degree requirements page and ASU Class Search, both of which were part of the expected answer.
 
-     "The relevant information was split across a chunk boundary, so retrieval returned
-     only half the context — the model didn't have enough to answer correctly" is an explanation.
+**Root cause tied to the pipeline:** This failure comes from both ingestion and retrieval. ASU Class Search was collected as a source, but the ingestion pipeline could not extract useful text from it because the dynamic page cleaned down to only 2 tokens, so no Class Search chunk was available to retrieve. The SCAI degree requirements page did load, but the top-5 retrieval set was crowded by duplicate major-map and General Studies chunks. Because the reranker prioritizes source authority but does not enforce source diversity, multiple chunks from the same official sources displaced another relevant official source.
 
-     "The embedding model treated the professor's nickname as out-of-vocabulary and returned
-     results from an unrelated review" is an explanation. -->
-
-**Question that failed:**
-
-**What the system returned:**
-
-**Root cause (tied to a specific pipeline stage):**
-
-**What you would change to fix it:**
-
----
+**What I would change to fix it:** I would add a manual or API-backed fallback for dynamic ASU Class Search pages so term-specific course offerings can be represented as local text or structured JSON. I would also add source-diverse reranking, such as limiting results to one or two chunks per source or using maximal marginal relevance, so the top-k set covers more distinct official sources. For degree-requirement questions, I would also add query routing that boosts the SCAI degree requirements page specifically.
 
 ## Spec Reflection
 
-<!-- Reflect on how planning.md shaped your implementation.
-     Answer both questions with at least 2–3 sentences each. -->
+**One way the spec helped during implementation:** The `planning.md` spec made the source-authority rules clear before code was written. Because the spec said official ASU sources win for requirements and Reddit is only for student experience, I preserved `source_type` and `authority_level` metadata through ingestion, chunking, ChromaDB storage, retrieval, generation, and the UI. That planning also shaped the generation prompt, which explicitly distinguishes official ASU information from unofficial student-experience information.
 
-**One way the spec helped you during implementation:**
+The chunking and retrieval sections also gave the implementation concrete targets. The planned chunk sizes led to source-specific chunking rules instead of a generic fixed-character splitter, and the planned top-k retrieval became a measurable checkpoint during Milestone 4. When tutoring retrieval initially returned course syllabi instead of the official PULSE tutoring page, it showed that my retriever was not following the authority rules I wrote in `planning.md`.
 
-**One way your implementation diverged from the spec, and why:**
+**One way the implementation diverged from the spec, and why:** The original retrieval plan was mostly plain ChromaDB semantic top-k retrieval. During testing, pure semantic retrieval sometimes returned chunks that were topically related but not the best authority source; for example, syllabi that mentioned tutoring could outrank the official tutoring page. I diverged by adding query expansion, metadata-aware reranking, and an inspection threshold so official pages are preferred for official questions.
 
----
+Another divergence is that the ASU Class Search source was listed in the source manifest but did not become a usable chunk. The page appears dynamic or blocked in the simple ingestion path, so the pipeline recorded the failure instead of fabricating content. I documented the missing source instead of claiming it was covered.
 
 ## AI Usage
 
-<!-- Describe at least 2 specific instances where you used an AI tool during this project.
-     For each: what did you give the AI as input, what did it produce, and what did you
-     change, override, or direct differently?
-
-     "I used Claude to help me code" is not sufficient.
-     "I gave Claude my Chunking Strategy section from planning.md and asked it to implement
-     chunk_text(). It returned a function using a fixed character split. I overrode the
-     chunk size from 500 to 200 because my documents are short reviews, not long guides." -->
-
 **Instance 1**
 
-- *What I gave the AI:*
-- *What it produced:*
-- *What I changed or overrode:*
+- *What I gave the AI:* I gave the AI the Milestone 3 requirements, the Documents section from `planning.md`, the source list, and the chunking strategy with target token sizes and overlap.
+- *What it produced:* It helped draft a Python ingestion and chunking pipeline that loads source metadata, fetches/extracts text, cleans documents, writes raw/clean JSONL files, and produces `data/chunks.jsonl`.
+- *What I changed or overrode:* I kept the implementation tied to the milestone and did not add embeddings or ChromaDB during Milestone 3. I also directed the pipeline to keep source authority metadata in every chunk, use smaller no-overlap chunks for Reddit, save inspection reports, and record the ASU Class Search failure instead of producing empty chunks.
 
 **Instance 2**
 
-- *What I gave the AI:*
-- *What it produced:*
-- *What I changed or overrode:*
+- *What I gave the AI:* I gave the AI the Retrieval Approach section, the architecture diagram, and the finalized chunk format from Milestone 3.
+- *What it produced:* It helped create the ChromaDB embedding and retrieval script using `all-MiniLM-L6-v2`, persistent ChromaDB storage, source metadata, top-k retrieval, and a retrieval report.
+- *What I changed or overrode:* I adjusted the implementation after inspecting real retrieval results. The first tutoring query buried FSE PULSE under course pages, so I changed the retriever to query extra candidates, use metadata-aware reranking, apply a distance threshold, and update `planning.md` from top-k 6 to top-k 5 to match the milestone guidance.
+
+**Instance 3**
+
+- *What I gave the AI:* I gave the AI the Milestone 5 grounding requirement, source-authority rules, the retrieval function, the Groq model requirement, and the Gradio interface skeleton.
+- *What it produced:* It helped wire retrieval to Groq generation and build a Gradio UI with answer and source panes.
+- *What I changed or overrode:* I tightened the system prompt so the model must answer only from retrieved context and must use the exact insufficient-information sentence when context is missing. I also made source attribution programmatic in `query.py` instead of relying only on the model, added a smoke-test script, and verified an out-of-domain dining hall question declined instead of hallucinating.
+
+## Running the Project
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Create a `.env` file with:
+
+```bash
+GROQ_API_KEY=your_key_here
+```
+
+Build or refresh the document pipeline:
+
+```bash
+python scripts/build_document_pipeline.py
+```
+
+Build or refresh the vector store:
+
+```bash
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 python scripts/build_vector_store.py
+```
+
+Run the Gradio app:
+
+```bash
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 python app.py
+```
+
+Open `http://127.0.0.1:7860`.
+
+Run the final evaluation script:
+
+```bash
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 python scripts/test_generation.py
+```

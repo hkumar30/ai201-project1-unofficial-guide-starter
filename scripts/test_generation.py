@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run Milestone 5 grounded generation smoke tests."""
+"""Run Milestone 6 grounded generation evaluation."""
 
 from __future__ import annotations
 
@@ -16,9 +16,11 @@ REPORT_PATH = ROOT / "data" / "generation_report.txt"
 
 
 TEST_QUERIES = [
-    "Where can I get tutoring for CSE courses?",
-    "How do I schedule or use SCAI advising?",
-    "Should I take CSE 330, CSE 340, and CSE 355 in the same semester?",
+    "Which sources should be treated as authoritative for ASU CS degree requirements?",
+    "Which sources should answer questions about where to get tutoring for CSE courses?",
+    "Which sources should answer questions about scheduling or using SCAI advising?",
+    "What source types should be used to answer whether CSE 330, CSE 340, and CSE 355 are hard to take together?",
+    "What sources should be used for CSE 340 course content versus student preparation advice?",
     "Which ASU dining hall has the best late-night food?",
 ]
 
@@ -47,6 +49,7 @@ def main() -> int:
     for question in TEST_QUERIES:
         reports.append(format_result(question))
     report = "\n".join(reports) + "\n"
+    report = "\n".join(line.rstrip() for line in report.splitlines()) + "\n"
     REPORT_PATH.write_text(report, encoding="utf-8")
     print(report)
     print(f"Wrote {REPORT_PATH.relative_to(ROOT)}")

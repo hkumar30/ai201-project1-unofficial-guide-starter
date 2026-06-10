@@ -1,44 +1,80 @@
 ================================================================================
-Question: Where can I get tutoring for CSE courses?
+Question: Which sources should be treated as authoritative for ASU CS degree requirements?
 
 Answer:
-You can get tutoring for CSE courses at the FSE PULSE Tutoring Centers, which offer free, drop-in tutoring, workshops, and review sessions [S1]. The centers provide in-person and online tutoring, and support various CSE courses, including CSE 100, CSE 230, CSE 330, and others [S1]. Tutoring is available at multiple locations on campus, as well as online, with hours varying by semester [S1].
+For ASU CS degree requirements, official ASU sources such as the major map and program requirements should be treated as authoritative [S1, S2, S3]. These sources provide detailed information on the necessary courses, credit hours, and minimum grades required for the degree. Additionally, official ASU sources like the general studies requirement page [S4, S5] provide information on university-wide requirements that must be fulfilled. If there are any discrepancies, the official ASU sources take precedence, and it is recommended to verify final schedule changes with ASU advising.
 
 Sources:
-- [S1] FSE PULSE Tutoring Centers (chunk 1, distance 0.3425)
+- [S1] ASU Computer Science BS major map, 2024-2025 (chunk 1, distance 0.2454)
+https://degrees.apps.asu.edu/major-map/ASU00/ESCSEBS/null/ALL/2024
+- [S2] ASU Computer Science BS program requirements, 2025-2026 (chunk 1, distance 0.2843)
+https://degrees.apps.asu.edu/checksheet/2025/CES/ESCSEBS/null
+- [S3] ASU Computer Science BS major map, 2024-2025 (chunk 4, distance 0.3331)
+https://degrees.apps.asu.edu/major-map/ASU00/ESCSEBS/null/ALL/2024
+- [S4] ASU undergraduate General Studies requirement (chunk 5, distance 0.3777)
+https://catalog.asu.edu/ug_gsr
+- [S5] ASU undergraduate General Studies requirement (chunk 6, distance 0.3813)
+https://catalog.asu.edu/ug_gsr
+================================================================================
+Question: Which sources should answer questions about where to get tutoring for CSE courses?
+
+Answer:
+For questions about where to get tutoring for CSE courses, you can refer to the FSE PULSE Tutoring Centers [S1], which is an official ASU page and an authoritative source. According to [S1], the Fulton Schools of Engineering Tutoring Centers offer free, drop-in tutoring, workshops, and review sessions to undergraduate students, including those taking CSE courses. They have multiple locations on campus and online, and their hours of operation vary by semester [S1].
+
+Sources:
+- [S1] FSE PULSE Tutoring Centers (chunk 1, distance 0.3375)
 https://students.engineering.asu.edu/pulse/tutoring/
 ================================================================================
-Question: How do I schedule or use SCAI advising?
+Question: Which sources should answer questions about scheduling or using SCAI advising?
 
 Answer:
-To schedule or use SCAI advising, current students can make an appointment with an academic advisor through the online advising appointment scheduling tool [S1]. They can access the tool by going to the provided link, selecting "Current Student", and logging in with their ASURITE User ID and Password [S1]. Prospective students can call the respective SCAI Advising Center for their campus of interest [S2]. It is recommended to be prepared for the meeting by discussing situation, plans, and goals with an open mind, and to ask questions [S3]. Students can also find information on Express Advising, including scheduled hours, at the provided link [S1] [S2]. 
-
-For specific contact information, students can refer to the SCAI Academic Advising Center contact details provided in [S2] and [S3], which include phone numbers, physical addresses, and email addresses for different campuses.
+For questions about scheduling or using SCAI advising, you should refer to official ASU sources such as [S1] and [S2]. These sources provide information on how to schedule an appointment with an academic advisor, including the use of the online appointment scheduling tool [S1, S2]. They also offer contact information for the SCAI Academic Advising Centers, including phone numbers and email addresses [S1, S2, S3]. Additionally, [S3] provides guidance on preparing for a meeting with an advisor. If you have further questions, you can reach out to the SCAI Academic Advising Centers directly using the contact information provided in these sources.
 
 Sources:
-- [S1] SCAI Advising Appointments (chunk 1, distance 0.1822)
+- [S1] SCAI Advising Appointments (chunk 1, distance 0.1859)
 https://scai.engineering.asu.edu/scai-advising-appointments/
-- [S2] SCAI Advising (chunk 1, distance 0.1992)
+- [S2] SCAI Advising (chunk 1, distance 0.2431)
 https://scai.engineering.asu.edu/advising/
-- [S3] SCAI Advising Appointments (chunk 2, distance 0.3323)
+- [S3] SCAI Advising Appointments (chunk 2, distance 0.3701)
 https://scai.engineering.asu.edu/scai-advising-appointments/
 ================================================================================
-Question: Should I take CSE 330, CSE 340, and CSE 355 in the same semester?
+Question: What source types should be used to answer whether CSE 330, CSE 340, and CSE 355 are hard to take together?
 
 Answer:
-Taking CSE 330, CSE 340, and CSE 355 in the same semester may be challenging due to the heavy workload and difficulty of these courses. According to [S1], CSE 330 and CSE 340 will both use C/C++ and have projects that can be time-consuming, while CSE 355 is a theoretically difficult class with a lot of homework. [S4] also suggests that CSE 355 is a pure theory class that can be difficult to prepare for, and taking it with CSE 340 may be overwhelming. Additionally, [S5] mentions that the difficulty of these courses depends on the professors, but overall, they can be conceptually difficult and require a significant amount of time and effort. Therefore, it is recommended to carefully consider your schedule and workload before taking these courses together. If you still decide to take them, make sure to start the projects for CSE 330 and CSE 340 early and attend office hours for CSE 355 to grasp the concepts, as suggested by [S2].
+To answer whether CSE 330, CSE 340, and CSE 355 are hard to take together, you should use student-experience sources such as Reddit posts [S1], [S2], [S3], [S4], and [S5]. These sources provide impressions from students who have taken these classes, offering advice and insights into the challenges and workload of each course. They discuss the difficulty of the courses, the importance of starting projects early, and the need to balance time between the three classes [S1], [S2], [S3]. Additionally, they share tips on how to prepare and succeed in these classes, such as attending office hours and finding study groups [S4], [S5].
 
 Sources:
-- [S1] Reddit: CSE 340, 330, 355 (chunk 1, distance 0.3144)
+- [S1] Reddit: CSE 340, 330, 355 (chunk 1, distance 0.3468)
 https://www.reddit.com/r/ASU/comments/k8y7si/cse_340_330_355/
-- [S2] Reddit: How to prepare for CSE 355 and CSE 340? (chunk 1, distance 0.3328)
+- [S2] Reddit: How to prepare for CSE 355 and CSE 340? (chunk 1, distance 0.3148)
 https://www.reddit.com/r/ASU/comments/w89geu/how_to_prepare_for_cse_355_and_cse_340_what/
-- [S3] CSE 340 Spring 2025 syllabus (chunk 1, distance 0.3749)
-https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf
-- [S4] Reddit: How do I prepare for CSE 355? (chunk 3, distance 0.3413)
-https://www.reddit.com/r/ASU/comments/13yvlki/how_do_i_prepare_for_cse_355/
-- [S5] Reddit: Are the CS trifecta courses really that hard? (chunk 1, distance 0.4261)
+- [S3] Reddit: CSE 340, 330, 355 (chunk 2, distance 0.3932)
+https://www.reddit.com/r/ASU/comments/k8y7si/cse_340_330_355/
+- [S4] Reddit: Are the CS trifecta courses really that hard? (chunk 1, distance 0.4286)
 https://www.reddit.com/r/ASU/comments/tna185/are_the_computer_science_trifecta_courses_really/
+- [S5] Reddit: Are the CS trifecta courses really that hard? (chunk 2, distance 0.4517)
+https://www.reddit.com/r/ASU/comments/tna185/are_the_computer_science_trifecta_courses_really/
+================================================================================
+Question: What sources should be used for CSE 340 course content versus student preparation advice?
+
+Answer:
+For CSE 340 course content, the official ASU source [S2] should be used, as it provides the authoritative syllabus for the course, including the catalogue description, textbook, and learning objectives.
+
+For student preparation advice, unofficial sources such as Reddit [S1], [S3], and [S4] can be used, as they provide insights from students who have taken the course, including tips on how to prepare, recommended resources, and common challenges. Additionally, the student-maintained unofficial ASU CS Wiki [S5] can be used for general information about the course, including prerequisites, credits, and course objectives.
+
+It's important to note that while unofficial sources can provide valuable advice and insights, the official ASU source [S2] is the authoritative source for course content and requirements. If there are any discrepancies, the official ASU source wins, and it's recommended to verify final schedule changes with ASU advising.
+
+Sources:
+- [S1] Reddit: How to prepare for CSE 355 and CSE 340? (chunk 1, distance 0.3024)
+https://www.reddit.com/r/ASU/comments/w89geu/how_to_prepare_for_cse_355_and_cse_340_what/
+- [S2] CSE 340 Spring 2025 syllabus (chunk 1, distance 0.3318)
+https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf
+- [S3] Reddit: CSE 340, 330, 355 (chunk 1, distance 0.4125)
+https://www.reddit.com/r/ASU/comments/k8y7si/cse_340_330_355/
+- [S4] Reddit: How do I prepare for CSE 355? (chunk 1, distance 0.3598)
+https://www.reddit.com/r/ASU/comments/13yvlki/how_do_i_prepare_for_cse_355/
+- [S5] ASU CS Wiki: CSE 340 (chunk 1, distance 0.4435)
+https://wiki.thesoda.io/courses/cse-340/
 ================================================================================
 Question: Which ASU dining hall has the best late-night food?
 
