@@ -58,9 +58,17 @@ Official ASU sources are authoritative for degree requirements, prerequisites, c
 
 **Chunk size:**
 
+Use a structure-first chunking strategy with token caps instead of only fixed-length splitting. For long official pages, degree pages, major maps, and syllabus PDFs, target about 800 tokens per chunk with a hard maximum of about 1,000 tokens. For Reddit/student-experience sources, keep each original post or top-level comment as its own chunk when possible; only split a comment if it is unusually long, using a smaller target of about 350-500 tokens.
+
 **Overlap:**
 
+Use about 120 tokens of overlap for long official pages, syllabi, and wiki sections so that prerequisites, grading details, or course-topic explanations do not get separated from their surrounding context. Use little or no overlap for Reddit chunks when a chunk is already a complete post or comment, because duplicating short opinion text can overweight one student's view in retrieval.
+
 **Reasoning:**
+
+The document set is mixed: some sources are structured official pages or PDFs with many sections, while others are shorter student comments or course-guide pages. Official pages should be split by headings or requirement sections first, then capped by token count. Major maps and checksheets should be split by semester or requirement group. PDFs should be split by syllabus section if the headings extract cleanly; otherwise, page-level chunks are an acceptable fallback. Reddit threads should preserve comment boundaries because a single comment usually contains one student's complete workload impression or preparation tip.
+
+Chunks that are too small would make retrieval miss context, such as a course prerequisite appearing in one chunk and the course name or catalog year appearing in another. Chunks that are too large would mix unrelated requirements, policies, course advice, and opinions, causing retrieval to return broad but unfocused context. The goal is for each chunk to answer one narrow question on its own while still preserving enough surrounding context for source-grounded generation.
 
 ---
 
@@ -74,9 +82,17 @@ Official ASU sources are authoritative for degree requirements, prerequisites, c
 
 **Embedding model:**
 
+Use `all-MiniLM-L6-v2` through `sentence-transformers`. It is a good baseline for this project because it runs locally, is already represented in the project dependencies, is fast enough for a small student project corpus, and works well for semantic similarity over short-to-medium English text.
+
 **Top-k:**
 
+Retrieve the top 6 chunks per query from ChromaDB. Six chunks should usually provide enough context to combine official ASU requirements with one or two relevant unofficial student-experience chunks without overwhelming the generation step. For questions about requirements, prerequisites, advising, General Studies, or tutoring, the response should prefer official ASU chunks even if Reddit chunks also appear in the result set.
+
 **Production tradeoff reflection:**
+
+If this were deployed for real users and cost were not a constraint, I would compare models with longer context windows, stronger retrieval accuracy on academic/catalog language, and better handling of mixed formal and informal text. A larger hosted embedding model might improve matching between student phrasing and official catalog language, but it would add cost, latency, and API dependency. A local model keeps the project simple and reproducible, but it may be less accurate for nuanced course-planning questions. I would also test whether reranking retrieved chunks improves cases where Reddit opinions are semantically similar to a query but official ASU sources should be treated as more authoritative.
+
+Semantic search helps because a student might ask "Is the trifecta too much?" even if a source says "CSE 330, CSE 340, and CSE 355 workload." Embeddings can place those related meanings near each other even when the exact words differ. Retrieving too few chunks could miss either the official requirement context or the student workload context; retrieving too many chunks could introduce noise and make the generated answer less focused.
 
 ---
 
@@ -89,17 +105,13 @@ Official ASU sources are authoritative for degree requirements, prerequisites, c
 
 | # | Question | Expected answer |
 |---|----------|-----------------|
-| 1 | What courses should an ASU CS student take in the first two years? | The answer should use the official ASU major map and degree requirements to describe a semester-by-semester lower-division sequence, while reminding students to verify catalog-year details with advising. |
-| 2 | What are the prerequisites for CSE 310, CSE 340, CSE 355, or CSE 365? | The answer should rely on official ASU catalog, degree, class-search, or syllabus sources for prerequisites and should not treat Reddit as authoritative. |
-| 3 | Should I take CSE 330, CSE 340, and CSE 355 in the same semester? | The answer should separate official requirement information from unofficial student workload impressions and recommend verifying schedule decisions with SCAI advising. |
-| 4 | What does CSE 310 cover, and how should I prepare for it? | The answer should combine official CSE 310 syllabus information with clearly labeled unofficial student preparation advice. |
-| 5 | What does CSE 355 cover, and why do students find it difficult? | The answer should use the official CSE 355 syllabus for course content and Reddit only for subjective difficulty or workload impressions. |
-| 6 | What is CSE 340 like, and how should I prepare for it? | The answer should use the official CSE 340 syllabus for course structure and the ASU CS Wiki or Reddit only for unofficial preparation context. |
-| 7 | Where can I get tutoring for CSE courses? | The answer should cite official ASU tutoring and academic support resources such as FSE PULSE. |
-| 8 | How do I schedule or use SCAI advising? | The answer should cite official SCAI advising and advising appointment pages. |
-| 9 | What General Studies requirements do ASU CS students need? | The answer should use official ASU General Studies and CS degree requirement pages, with attention to catalog-year differences. |
-| 10 | Which technical electives do students discuss as manageable or difficult? | The answer may summarize Reddit discussion as unofficial student experience and should avoid presenting opinions as official guidance. |
-| 11 | What information should I verify with official ASU advising before changing my schedule? | The answer should identify requirements, prerequisites, catalog year, course availability, transfer credit, and graduation impact as items to confirm with advising. |
+| 1 | Which sources should be treated as authoritative for ASU CS degree requirements? | The correct answer should name the ASU Computer Science BS program requirements/checksheet, ASU major map, SCAI degree requirements page, ASU General Studies page, and ASU Class Search as official sources. It should also state that Reddit and the student wiki are not authoritative for degree requirements. |
+| 2 | Which sources should answer questions about where to get tutoring for CSE courses? | The correct answer should point to the FSE PULSE Tutoring Centers source as the official tutoring and academic support source, not Reddit. |
+| 3 | Which sources should answer questions about scheduling or using SCAI advising? | The correct answer should point to the SCAI Advising and SCAI Advising Appointments pages as the official advising sources. |
+| 4 | What source types should be used to answer whether CSE 330, CSE 340, and CSE 355 are hard to take together? | The correct answer should use Reddit/student-experience threads only for unofficial workload impressions and should use official ASU sources for requirements, prerequisites, and schedule rules. It should not present Reddit opinions as official guidance. |
+| 5 | What sources should be used for CSE 340 course content versus student preparation advice? | The correct answer should use the official CSE 340 Spring 2025 syllabus for course content and expectations, and the ASU CS Wiki or Reddit only for unofficial student-facing preparation context. |
+| 6 | What sources should be used for CSE 310 course content and preparation advice? | The correct answer should use the official CSE 310 Spring 2025 syllabus for course content and the Reddit CSE 310 preparation thread only as unofficial student preparation advice. |
+| 7 | What should the system say if official ASU sources and Reddit disagree about a requirement or prerequisite? | The correct answer should say that official ASU sources win, and the student should verify final schedule decisions with ASU advising. |
 
 ---
 
@@ -111,7 +123,17 @@ Official ASU sources are authoritative for degree requirements, prerequisites, c
 
 1.
 
+Reddit threads are noisy, subjective, and may be outdated. A future retrieval system might surface a confident student opinion that conflicts with official ASU requirements, so source type and authority metadata must be preserved and shown in responses.
+
 2.
+
+Different catalog years and terms can produce different requirements, course availability, or sequencing advice. If chunks do not preserve catalog year and term metadata, the system could mix a 2024-2025 major map with 2025-2026 requirements or a term-specific Class Search result.
+
+3. PDF syllabi may not extract cleanly. If PDF headings, tables, or schedules are flattened badly, chunks could separate course topics from grading policies or prerequisites.
+
+4. Chunk boundaries can damage retrieval quality. If chunks are too small, the system may retrieve a fragment without enough context; if they are too large, the system may retrieve a broad chunk that contains the right term but too much unrelated information.
+
+5. Some pages may be dynamic or hard to scrape later. ASU catalog and class-search pages may need special handling during ingestion so the pipeline captures useful text and metadata instead of navigation or empty page content.
 
 ---
 
@@ -122,6 +144,35 @@ Official ASU sources are authoritative for degree requirements, prerequisites, c
      Label each stage with the tool or library you're using.
      You can use ASCII art, a Mermaid diagram, or embed a sketch as an image.
      You'll use this diagram as context when prompting AI tools to implement each stage. -->
+
+```text
+Source URLs + local PDFs + data/sources.json
+        |
+        v
+Document Ingestion
+  Planned tools: Python, requests/BeautifulSoup for web pages, pdfplumber for PDFs,
+  and source metadata from data/sources.json
+        |
+        v
+Chunking
+  Planned tool: custom Python chunker using source-type rules
+  official pages by heading, major maps by semester/requirement group,
+  PDFs by syllabus section/page, Reddit by post/comment
+        |
+        v
+Embedding + Vector Store
+  Planned tools: sentence-transformers all-MiniLM-L6-v2 + ChromaDB
+        |
+        v
+Retrieval
+  Planned tool: ChromaDB semantic similarity search, top-k = 6,
+  with source authority metadata preserved
+        |
+        v
+Generation
+  Planned tool: Groq chat model with a grounding prompt,
+  source citations, and official-source priority rules
+```
 
 ---
 
@@ -137,8 +188,14 @@ Official ASU sources are authoritative for degree requirements, prerequisites, c
      "I'll give Claude my Chunking Strategy section and ask it to implement chunk_text()
      with my specified chunk size and overlap" is a plan. -->
 
-**Milestone 3 — Ingestion and chunking:**
+**Milestone 3 - Ingestion and chunking:**
 
-**Milestone 4 — Embedding and retrieval:**
+I plan to use an AI tool to help implement document ingestion and chunking. I will give it the Documents section, Chunking Strategy section, and Architecture diagram from this `planning.md`, plus the rule that Milestone 3 should not create embeddings, ChromaDB retrieval, Groq generation, or an interface unless those are explicitly assigned. I expect it to produce functions for loading source metadata, extracting text from HTML/PDF/local files, cleaning obvious boilerplate, and chunking text according to source type. I will verify the output by inspecting extracted text samples, checking chunk sizes, confirming source metadata is attached to every chunk, and making sure the chunker preserves official versus unofficial source labels.
 
-**Milestone 5 — Generation and interface:**
+**Milestone 4 - Embedding and retrieval:**
+
+I plan to use an AI tool to help implement embeddings and vector search. I will give it the Retrieval Approach section, Architecture diagram, and the finalized chunk format from Milestone 3. I expect it to produce code that embeds chunks with `all-MiniLM-L6-v2`, stores them in ChromaDB with metadata, and retrieves the top 6 relevant chunks for a query. I will verify the output by running the evaluation questions and checking whether retrieved chunks come from the expected official or unofficial source categories.
+
+**Milestone 5 - Generation and interface:**
+
+I plan to use an AI tool to help implement grounded generation and a simple query interface. I will give it the source authority rules from the Domain section, the Retrieval Approach section, and the Evaluation Plan questions. I expect it to produce a prompt template and response function that uses retrieved context, cites sources, distinguishes official ASU information from student experience, and refuses to treat Reddit as authoritative for requirements. I will verify the output by checking that each evaluation response includes relevant citations and does not answer beyond the retrieved sources.
