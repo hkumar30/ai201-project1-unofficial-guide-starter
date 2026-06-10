@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "title": "ASU Computer Science BS program page",
+    "url": "https://scai.engineering.asu.edu/computer-science-bs/",
+    "source_type": "official_asu_page",
+    "authority_level": "authoritative_official",
+    "topic_tags": ["program_overview", "degree_framing", "major_map_context"],
+    "course_codes": ["CSE"],
+    "use_case": "Program overview, degree framing, and major map context.",
+    "notes": "Use as official context for the ASU Computer Science BS program."
+  },
+  {
+    "id": 2,
+    "title": "ASU Computer Science BS program requirements, 2025-2026",
+    "url": "https://degrees.apps.asu.edu/checksheet/2025/CES/ESCSEBS/null",
+    "source_type": "official_asu_catalog_degree_page",
+    "authority_level": "authoritative_official_catalog_year_specific",
+    "topic_tags": ["degree_requirements", "credit_structure", "catalog_year"],
+    "course_codes": ["CSE"],
+    "use_case": "Official degree requirements and credit structure for the 2025-2026 catalog year.",
+    "notes": "Use as authoritative for requirements tied to the 2025-2026 catalog year."
+  },
+  {
+    "id": 3,
+    "title": "ASU Computer Science BS major map, 2024-2025",
+    "url": "https://degrees.apps.asu.edu/major-map/ASU00/ESCSEBS/null/ALL/2024",
+    "source_type": "official_asu_catalog_degree_page",
+    "authority_level": "authoritative_official_catalog_year_specific",
+    "topic_tags": ["major_map", "course_sequence", "semester_planning"],
+    "course_codes": ["CSE"],
+    "use_case": "Semester-by-semester course sequencing for ASU Computer Science BS students.",
+    "notes": "Use as authoritative for the 2024-2025 major map sequence."
+  },
+  {
+    "id": 4,
+    "title": "SCAI CS BS degree requirements page",
+    "url": "https://scai.engineering.asu.edu/computer-science-bs/degree-requirements/",
+    "source_type": "official_asu_page",
+    "authority_level": "authoritative_official",
+    "topic_tags": ["degree_requirements", "curriculum_updates", "general_studies"],
+    "course_codes": ["CSE"],
+    "use_case": "Degree requirements, curriculum updates, and General Studies guidance.",
+    "notes": "Use as official SCAI guidance for CS BS degree planning."
+  },
+  {
+    "id": 5,
+    "title": "ASU undergraduate General Studies requirement",
+    "url": "https://catalog.asu.edu/ug_gsr",
+    "source_type": "official_asu_catalog_degree_page",
+    "authority_level": "authoritative_official",
+    "topic_tags": ["general_studies", "university_requirements", "graduation_requirements"],
+    "course_codes": [],
+    "use_case": "University-wide General Studies requirements.",
+    "notes": "Use as authoritative for ASU General Studies rules."
+  },
+  {
+    "id": 6,
+    "title": "ASU Class Search: CSE courses",
+    "url": "https://catalog.apps.asu.edu/catalog/classes/classlist?campusOrOnlineSelection=A&honors=F&promod=F&searchType=all&subject=CSE&term=2257",
+    "source_type": "official_asu_catalog_degree_page",
+    "authority_level": "authoritative_official_term_specific",
+    "topic_tags": ["class_search", "course_offerings", "catalog_information"],
+    "course_codes": ["CSE"],
+    "use_case": "Current CSE course offerings and catalog-style course information.",
+    "notes": "Course availability is term-specific and may change."
+  },
+  {
+    "id": 7,
+    "title": "CSE 205 syllabus, Spring 2025",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-205-Syllabus-SP25.pdf",
+    "source_type": "official_asu_pdf",
+    "authority_level": "authoritative_official_term_specific",
+    "topic_tags": ["syllabus", "course_details", "course_expectations"],
+    "course_codes": ["CSE 205"],
+    "use_case": "Course-level detail for CSE 205.",
+    "notes": "Official syllabus PDF for Spring 2025."
+  },
+  {
+    "id": 8,
+    "title": "CSE 310 syllabus, Spring 2025",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-310-Syllabus-SP25.pdf",
+    "source_type": "official_asu_pdf",
+    "authority_level": "authoritative_official_term_specific",
+    "topic_tags": ["syllabus", "data_structures", "algorithms", "course_expectations"],
+    "course_codes": ["CSE 310"],
+    "use_case": "Course-level detail for CSE 310.",
+    "notes": "Official syllabus PDF for Spring 2025."
+  },
+  {
+    "id": 9,
+    "title": "CSE 355 syllabus, Spring 2025",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-355-Syllabus-SP25.pdf",
+    "source_type": "official_asu_pdf",
+    "authority_level": "authoritative_official_term_specific",
+    "topic_tags": ["syllabus", "theoretical_computer_science", "course_expectations"],
+    "course_codes": ["CSE 355"],
+    "use_case": "Course-level detail for CSE 355.",
+    "notes": "Official syllabus PDF for Spring 2025."
+  },
+  {
+    "id": 10,
+    "title": "FSE PULSE Tutoring Centers",
+    "url": "https://students.engineering.asu.edu/pulse/tutoring/",
+    "source_type": "official_asu_page",
+    "authority_level": "authoritative_official",
+    "topic_tags": ["tutoring", "academic_support", "student_resources"],
+    "course_codes": ["CSE"],
+    "use_case": "Tutoring and academic support resources.",
+    "notes": "Use as official Fulton Schools tutoring resource."
+  },
+  {
+    "id": 11,
+    "title": "SCAI Advising",
+    "url": "https://scai.engineering.asu.edu/advising/",
+    "source_type": "official_asu_page",
+    "authority_level": "authoritative_official",
+    "topic_tags": ["advising", "student_resources", "degree_planning"],
+    "course_codes": ["CSE"],
+    "use_case": "Advising resources and advising contacts.",
+    "notes": "Use as official SCAI advising information."
+  },
+  {
+    "id": 12,
+    "title": "SCAI Advising Appointments",
+    "url": "https://scai.engineering.asu.edu/scai-advising-appointments/",
+    "source_type": "official_asu_page",
+    "authority_level": "authoritative_official",
+    "topic_tags": ["advising", "appointments", "student_resources"],
+    "course_codes": ["CSE"],
+    "use_case": "How to schedule or understand advising appointments.",
+    "notes": "Use as official guidance for SCAI advising appointments."
+  },
+  {
+    "id": 13,
+    "title": "CSE 340 Spring 2025 syllabus",
+    "url": "https://scai.engineering.asu.edu/wp-content/uploads/sites/31/2025/03/CSE-340-Syllabus-SP25.pdf",
+    "source_type": "official_asu_pdf",
+    "authority_level": "authoritative_official_term_specific",
+    "topic_tags": ["syllabus", "programming_languages", "course_expectations"],
+    "course_codes": ["CSE 340"],
+    "use_case": "Course-level detail for CSE 340.",
+    "notes": "Official syllabus PDF for Spring 2025."
+  },
+  {
+    "id": 14,
+    "title": "ASU CS Wiki: CSE 340",
+    "url": "https://wiki.thesoda.io/courses/cse-340/",
+    "source_type": "student_maintained_unofficial",
+    "authority_level": "unofficial_context_only",
+    "topic_tags": ["student_guide", "course_expectations", "preparation_advice"],
+    "course_codes": ["CSE 340"],
+    "use_case": "Student-facing explanation of CSE 340 topics and expectations.",
+    "notes": "Use for unofficial context only; official ASU sources override it."
+  },
+  {
+    "id": 15,
+    "title": "Reddit: Are the CS trifecta courses really that hard?",
+    "url": "https://www.reddit.com/r/ASU/comments/tna185/are_the_computer_science_trifecta_courses_really/",
+    "source_type": "reddit_student_experience",
+    "authority_level": "unofficial_context_only",
+    "topic_tags": ["workload", "difficulty", "trifecta", "student_experience"],
+    "course_codes": ["CSE 330", "CSE 340", "CSE 355"],
+    "use_case": "Student workload discussion about CSE 330, CSE 340, and CSE 355.",
+    "notes": "Use only for subjective workload impressions and planning concerns."
+  },
+  {
+    "id": 16,
+    "title": "Reddit: CSE 340, 330, 355",
+    "url": "https://www.reddit.com/r/ASU/comments/k8y7si/cse_340_330_355/",
+    "source_type": "reddit_student_experience",
+    "authority_level": "unofficial_context_only",
+    "topic_tags": ["trifecta", "course_comparison", "student_experience"],
+    "course_codes": ["CSE 330", "CSE 340", "CSE 355"],
+    "use_case": "Student discussion about differences between the trifecta courses.",
+    "notes": "Use only for unofficial student perspectives."
+  },
+  {
+    "id": 17,
+    "title": "Reddit: How to prepare for CSE 355 and CSE 340?",
+    "url": "https://www.reddit.com/r/ASU/comments/w89geu/how_to_prepare_for_cse_355_and_cse_340_what/",
+    "source_type": "reddit_student_experience",
+    "authority_level": "unofficial_context_only",
+    "topic_tags": ["preparation_advice", "difficulty", "student_experience"],
+    "course_codes": ["CSE 340", "CSE 355"],
+    "use_case": "Student preparation advice for CSE 355 and CSE 340.",
+    "notes": "Use only for unofficial preparation advice."
+  },
+  {
+    "id": 18,
+    "title": "Reddit: How do I prepare for CSE 355?",
+    "url": "https://www.reddit.com/r/ASU/comments/13yvlki/how_do_i_prepare_for_cse_355/",
+    "source_type": "reddit_student_experience",
+    "authority_level": "unofficial_context_only",
+    "topic_tags": ["preparation_advice", "difficulty", "student_experience"],
+    "course_codes": ["CSE 355"],
+    "use_case": "Student advice about preparing for CSE 355.",
+    "notes": "Use only for unofficial student preparation advice."
+  },
+  {
+    "id": 19,
+    "title": "Reddit: Preparation for CSE 310",
+    "url": "https://www.reddit.com/r/ASU/comments/18gk8ok/preparation_for_cse310/",
+    "source_type": "reddit_student_experience",
+    "authority_level": "unofficial_context_only",
+    "topic_tags": ["preparation_advice", "difficulty", "student_experience"],
+    "course_codes": ["CSE 310"],
+    "use_case": "Student preparation advice for CSE 310.",
+    "notes": "Use only for unofficial student preparation advice."
+  },
+  {
+    "id": 20,
+    "title": "Reddit: Upper Division Technical Electives",
+    "url": "https://www.reddit.com/r/ASU/comments/dewiz2/upper_division_technical_electives/",
+    "source_type": "reddit_student_experience",
+    "authority_level": "unofficial_context_only",
+    "topic_tags": ["technical_electives", "workload", "difficulty", "student_experience"],
+    "course_codes": ["CSE"],
+    "use_case": "Student discussion of upper-division technical electives.",
+    "notes": "Use only for unofficial impressions of elective workload or difficulty."
+  }
+]
